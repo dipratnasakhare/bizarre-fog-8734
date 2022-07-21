@@ -1,0 +1,331 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: futura,sans-serif;
+    line-height: 24px;
+}
+
+body{
+width: 100%;
+height: auto;
+overflow-x: hidden;
+
+
+}
+
+  /* this is for any add or notification  */
+/* #adds{
+    background-color: aquamarine;
+    height: 80px;
+} */
+
+#logo{
+  text-align: center;
+  margin: 19px 0px;
+
+}
+
+#navbar{
+    height: 80px;
+    width: 100%;
+}
+
+#navbar>a{
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+    align-items: center;
+    
+}
+
+#black_strip{
+    height: 50px;
+    background-color: black;
+    color: aliceblue;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide_img{
+    background-image: url("https://cdn.shopify.com/s/files/1/0248/3473/6191/files/sunglasses1_3024x.jpg?v=1615211259");
+    font-size: 25px;
+    display: grid;
+    height: 500px;
+    align-content: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center; 
+
+}
+.slide_text1{
+    display: flex;
+    padding: 7px;
+   
+  
+
+}
+.slide1text{
+    background-color: aliceblue;
+    color: black;
+    margin-left: 20px;
+    padding: 10px;
+}
+#slide{
+    height: 450px;
+}
+
+#box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    display: flex;
+    height: 550px;
+    line-height: 45px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 65px;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+#box>div:nth-child(1){
+    background-image: url("https://cdn.shopify.com/s/files/1/0248/3473/6191/files/asapimage---533-x-644-px_900x.jpg?v=1650550832");
+    background-repeat: no-repeat;
+    display: grid;
+    width: 28%;
+    justify-content: center;
+    align-content: flex-end;
+    color: aliceblue;
+    padding: 20px;
+   
+   
+   }
+
+   #box>div:nth-child(2){
+    background-image: url("https://cdn.shopify.com/s/files/1/0248/3473/6191/files/WEB_ASSET_2_900x.jpg?v=1650894933");
+    background-repeat: no-repeat;
+    display: grid;
+    width: 27%;
+    justify-content: center;
+    align-content: flex-end;
+    color: aliceblue;
+    padding: 20px;
+    
+  
+  }
+  #box>div:nth-child(3){
+    background-image: url("https://cdn.shopify.com/s/files/1/0248/3473/6191/files/womens_tops_2_900x.jpg?v=1630508297");
+    background-repeat: no-repeat;
+    display: grid;
+    width: 27%;
+    justify-content: center;
+    align-content: flex-end;
+    color: aliceblue;
+    padding: 20px;
+   
+  }
+
+  /* sliding img text  */
+
+  .slide1text{
+    color: black;
+    background-color: aliceblue;
+    padding: 4px;
+    margin: 15px;
+   
+   
+}
+#slideid{
+    margin: auto;
+}
+
+
+/* category page  */
+
+#category{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+   
+}
+
+#category>div{
+  
+    text-align: center;
+    display: grid;
+    align-content: flex-end;
+}
+#category>div>img{
+    width: 70%;
+   
+    margin: auto;
+}
+
+/* sliding image  */
+
+.slideimg{
+    background-image: url("https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Bottega_Veneta_3024x.jpg?v=1615206215" );
+    font-size: 25px;
+    display: grid;
+    height: 560px;
+    align-content: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center; 
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+/* arrivals page */
+
+#arrivals{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    margin: auto;
+    width: 90%;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 35px;
+   
+}
+#arrivals>div{
+    margin-left: 5px;
+}
+#arrivals>div>img{
+    
+    width: 60%;
+}
+.save{
+    color: gold;
+    margin: 5px;
+}
+.para>p{
+    color: gold;
+    display: block;
+    
+}
+/* .save{
+    color: gold;
+    display: block;
+} */
+/* all h1 tag  */
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* trending page  */
+
+
+#trending{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    justify-content: space-evenly;
+    text-align: center;
+   
+}
+#trending>div{
+    margin-left: 50px;
+   
+    display: grid;
+    align-content: flex-end;
+}
+#trending>div>img{
+    margin: auto;
+    width: 60%;
+}
+
+#btn{
+    
+    text-align: center;
+    margin: 25px;
+    padding: 25px;
+}
+#btn1{
+    background-color: black;
+    padding: 10px 15px ;
+    color: aliceblue;
+   
+}
+
+
+#ending{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+  
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    line-height: 25px;
+}
+#ending>div{
+   
+    margin-left: 5px;
+   
+    display: grid;
+    width: 80%;
+    margin: auto;
+   
+  
+
+}
+#ending>div>img{
+    margin: auto;
+    width: 100%;
+    height: 300px;
+}
+
+#footer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    height: 250px;
+   
+ 
+  
+   
+}
+
+footer{
+    background-color: rgb(218, 211, 211);
+    padding: 50px;
+   margin-bottom: 15px;
+   
+}
+
+footer>div{
+  
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#signup>img{  
+    height: 50px;
+   
+
+}
+#small_footer>div{
+ 
+  margin: auto;
+  display: grid;
+  justify-content: center;
+ 
+     
+} 
+.change{
+    text-decoration: line-through;
+   
+}

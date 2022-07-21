@@ -5,35 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-         *{
-            margin: 0px;
-            padding: 0px;
-        }
-        #logo{
-            text-align: center;
-        }
-
-        header>a{
-            text-decoration: none;
-            justify-content: space-evenly;
-        }
-        #blue{
-           height: 70px;
-            background-color: aqua;
-        }
-         #black{
-            height: 40px;
-            background-color: black;
-
-        }
-    </style>
+    <link rel="stylesheet" href="clothe.css">
+  
 </head>
 <body>
      <header>
      </header>
-     <div id="blue"></div>
-     <header>
+    
+    <div id="adds"></div>
+    
+    <div id="logo"><img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt=""></div>
+   
+    <div id="navbar">
         <a href="clothes.html">CLOTHING</a>
         <a href="">SHOES</a>
         <a href="">HANDBAGS & ACCESSORIES</a>
@@ -43,25 +26,25 @@
         <a href="">UNDER $ 50</a>
         <a href="">BEAUTY</a>
         <a href="">CLEARANCE</a>
-    </header>
-    <div id="black"></div>
+      </div>
+    <!-- black strip after navbar for display text  -->
+    <div id="black_strip">WELCOME TO BLUE FLY :</div>
     <h1> ALL CLOTHES</h1>
-      
 
-    <div id="main">
+     <div id="trendig">
         <select  id="trend">
             <option value="">trending</option>
-            <option value="high to low"></option>
-            <option value="low to high"></option>
+            <option value="high to low">high to low</option>
+            <option value="low to high">low to high</option>
         </select>
-
-
-        <div>
-            <div>
+     </div> 
+    
+    <div id="main">
+            <div id="select">
                 <!-- collection  -->
                 <select id="collection">
                     <option value="collection">collection</option>
-                    <option value="womens">Womens</option>
+                    <option value="women">Womens</option>
                     <option value="men">Men</option>
                     <option value="all">Shop All</option>
                 </select>
@@ -69,38 +52,42 @@
                 <!-- category  -->
                 <select  id="category">
                     <option value="category">category</option>
-                    <option value="women dress">Women's Dresses</option>
-                    <option value="Women jacket">Women's Jackets</option>
-                    <option value="mens short">Men'Short</option>
+                    <option value="party">Party</option>
+                    <option value="jacket">Jackets</option>
+                    <option value="mens shorts">Men'Short</option>
+                    <option value="mens suit">Mens Suit</option>
+                    <option value="mens vists">Mens Vists</option>
+                    <option value="narmal">Narmal</option>
                 </select>
 
-                <!-- sub catogory  -->
-                <select id="sub_catagory">
-                    <option value="sub_catagory">sub_catagory</option>
-                    <option value="party">Women's Fancy</option>
-                    <option value="formal">Women Formal</option>
-                    <option value="jacket">Women's Jacket</option>
-                    <option value="mens_jacket">Men's jacket</option>
-                    <option value="suit"> Men's Blegers</option>
-                </select>
+              
 
                 <!-- brand  -->
                 <select id="brand">
                     <option value="brand">brand</option>
-                    <option value="gucii">GUCCI</option>
-                    <option value="armani">ARMANI</option>
-                    <option value="hugo_boss">HUGO BOSS</option>
-                    <option value="boss">BOSS</option>
-                    <option value="dior">DIOR</option>
+                    <option value="GUCCI">GUCCI</option>
+                    <option value="AMIRI">AMIRI</option>
+                    <option value="HOGO BOSS">HUGO BOSS</option>
+                    <option value="BERBERRY">BERBERRY</option>
                 </select>
-
-                <input type="number" placeholder="min">-
-                <input type="number" placeholder="max">
+                 <form >
+                <input id="min" type="number" placeholder="min 100">
+                <input id="max" type="number" placeholder="max 7500">
+                <input type="submit">
+                 </form>
+                
             </div>
-        </div>
-        <div>
+        
+
+        <div id="product">
             <!-- for all the product to put here by  -->
         </div>
+
+
+
     </div>
 </body>
 </html>
+<script src="clothes.js"></script>
+
+
