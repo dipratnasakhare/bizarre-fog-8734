@@ -1,6 +1,56 @@
-   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #product>div{
+  
+  display: grid;
+  align-content: flex-end;
+ 
+ 
 
-let arr=JSON.parse(localStorage.getItem("cart")) || []
+}
+#product>div>img{
+ height: 250px;
+ 
+ margin: auto;
+ 
+}
+#product>div>div{
+  
+display: grid;
+align-content: flex-end;
+
+}
+
+#product{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: auto;
+   
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 35px;
+ 
+ 
+}
+
+    </style>
+</head>
+<body>
+   <h1>total  - $ <span id="total">0</span></h1> 
+    welcome to cart section
+    <div id="product"></div>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/3c324d3c0c.js" crossorigin="anonymous"></script>
+<script>
+    let arr=JSON.parse(localStorage.getItem("cart")) || []
 
 
 let product_data=[  
@@ -399,26 +449,32 @@ let product_data=[
     }
    ]
    
-   display(product_data)
+   let arr1=JSON.parse(localStorage.getItem("cart")) || []
    
+   display(arr1)
    
-  
   function display(product_data){
-
+    let total=0
    document.querySelector("#product").innerHTML=""
 
     product_data.forEach(function(ele, i){
   
-
+    total+=Number(ele.price)
       let childe_div=document.createElement("div")
       let image=document.createElement("img")
       let name=document.createElement("p")
       let product_name=document.createElement("p")
       let price=document.createElement("p")
       let para=document.createElement("div")
+
+      let btn=document.createElement("button")
+      btn.innerText="DELETE"
+
+      btn.addEventListener("click", function(){
+        del(ele, i)
+      })
       
-      childe_div.addEventListener("click", function(){
-          
+      childe_div.addEventListener("click", function(){ 
         cart(ele, i)
       })
 
@@ -429,235 +485,54 @@ let product_data=[
       product_name.style.color="skyblue"
       price.innerText="$ "+ele.price
       
-      para.append(name, product_name, price)
-      childe_div.append(image,name,product_name, price)
+      para.append(name, product_name, price, )
+      childe_div.append(image,name,product_name, price, btn)
       
       document.querySelector("#product").append(childe_div)
       
       
       })
+    let   x=document.querySelector("#total")
+    x.innerText=total
   }
    
 
+function del(ele, i){
 
-function cart(ele,i){
+ arr.splice(i, i)
 
-  for(let i=0; i<arr.length; i++){
+console.log(arr)
 
-   if(arr[i].productid===ele.productid){
-    alert("you alredy added in cart")
-    return
-   }
+display(arr)
 
-  }
-alert("product is added")
-  console.log(ele)
+localStorage.setItem("cart", JSON.stringify(arr))
 
-  product_data.splice(i, 1)
-
-  arr.push(ele)
-
-  localStorage.setItem("cart", JSON.stringify(arr))
-
-  ele["cart"]="added in cart"
-
-  
 }
+// function cart(ele,i){
+
+//   for(let i=0; i<arr.length; i++){
+
+//    if(arr[i].productid===ele.productid){
+//     alert("you alredy added in cart")
+//     return
+//    }
+
+//   }
+// alert("product is added")
+//   console.log(ele)
+
+//   product_data.splice(i, 1)
+
+//   arr.push(ele)
+
+//   localStorage.setItem("cart", JSON.stringify(arr))
+
+//  display(arr)
+
+  
+// }
 
 
 
 
-
-
-
-
-
-
-   
-  
-  document.querySelector("#collection").addEventListener("change", function(){
-  
-  let coll=document.querySelector("#collection").value
-  
-  if(coll==="all"  || coll==="collection"){
-      display(product_data)
-      return
-  }
-  
-  let dis=product_data.filter(function(ele, i){
-   return ele.gender===coll
-  })
-  
-  display(dis)
-  
-  })
-  
-  
-  
-  document.querySelector("#category").addEventListener("change", function(){
-  
-  let coll=document.querySelector("#category").value
-  
-  
-  console.log(coll)
-  if(coll==="category"){
-      display(product_data)
-      return
-  }
-  
-  let dis=product_data.filter(function(ele, i){
-   return ele.catagory===coll
-  })
-  
-  display(dis)
-  
-  })
-  
-  
-  document.querySelector("#brand").addEventListener("change", function(){
-  
-  let coll=document.querySelector("#brand").value
-  
-  
-  console.log(coll)
-  if(coll==="brand"){
-      display(product_data)
-      return
-  }
-  
-  let dis=product_data.filter(function(ele, i){
-   return ele.brand===coll
-  })
-  
-  display(dis)
-  
-  })
-  
-  
-  document.querySelector("form").addEventListener("submit", function(){
-  
-      event.preventDefault()
-      let min=document.querySelector("#min").value
-      let max=document.querySelector("#max").value
-  
-  let dis=product_data.filter(function(ele, i){
-     let x=Number(ele.price)  
-    return  x>min && x<max
-  })
-  if(dis==""){
-      display(product_data)
-      return
-  }
-  display(dis)
-  
-  
-  
-  
-  
-  })
-  
-  
-  
-  
-  document.querySelector("#brand").addEventListener("change", function(){
-  
-  let coll=document.querySelector("#brand").value
-  
-  
-  console.log(coll)
-  if(coll==="brand"){
-      display(product_data)
-      return
-  }
-  
-  let dis=product_data.filter(function(ele, i){
-   return ele.brand===coll
-  })
-  
-  display(dis)
-  
-  })
-  
-  
-  
-  
-  document.querySelector("#trend").addEventListener("change", function(){
-  
-  let coll=document.querySelector("#trend").value
-  
-  
-  console.log(coll)
-  
-  
-  if(coll===""){
-      display(product_data)
-      return
-  }
-  
-  
-  
-  
-  let x=product_data.sort(function(x,y){
-       let a=Number(x.price) 
-       let b=Number(y.price)
-      if(a > b ) return 1
-      if(a < b) return -1
-      return 0
-  
-  })
-  
-  if(coll==="low to high"){
-      display(x)
-      return
-  }
-  
-  let y=product_data.sort(function(x,y){
-      let a=Number(x.price) 
-       let b=Number(y.price)
-      if(a > b ) return -1
-      if(a < b) return  1
-      return 0
-  })
-  
-  
-  
-  if(coll==="high to low"){
-    display(y)
-    return
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  })
-  
-  
-  
-  
-  
-  
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+</script>
