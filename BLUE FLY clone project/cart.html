@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +52,7 @@ align-content: flex-end;
 </html>
 <script src="https://kit.fontawesome.com/3c324d3c0c.js" crossorigin="anonymous"></script>
 <script>
+
     let arr=JSON.parse(localStorage.getItem("cart")) || []
 
 
@@ -449,9 +452,9 @@ let product_data=[
     }
    ]
    
-   let arr1=JSON.parse(localStorage.getItem("cart")) || []
    
-   display(arr1)
+   
+   display(arr)
    
   function display(product_data){
     let total=0
@@ -474,9 +477,9 @@ let product_data=[
         del(ele, i)
       })
       
-      childe_div.addEventListener("click", function(){ 
-        cart(ele, i)
-      })
+      // childe_div.addEventListener("click", function(){ 
+      //   cart(ele, i)
+      // })
 
 
       image.src=ele.img
@@ -508,29 +511,7 @@ display(arr)
 localStorage.setItem("cart", JSON.stringify(arr))
 
 }
-// function cart(ele,i){
 
-//   for(let i=0; i<arr.length; i++){
-
-//    if(arr[i].productid===ele.productid){
-//     alert("you alredy added in cart")
-//     return
-//    }
-
-//   }
-// alert("product is added")
-//   console.log(ele)
-
-//   product_data.splice(i, 1)
-
-//   arr.push(ele)
-
-//   localStorage.setItem("cart", JSON.stringify(arr))
-
-//  display(arr)
-
-  
-// }
 
 
 
