@@ -10,10 +10,12 @@ width: 100%;
 height: auto;
 overflow-x: hidden;
 
-
 }
 
   
+
+
+
 
 #logo{
   text-align: center;
@@ -44,7 +46,55 @@ overflow-x: hidden;
 #navbar{
     height: 50px;
     width: 100%;
+    
 }
+
+
+
+
+
+
+.drop{
+   position: absolute; 
+   background-color: rgb(255, 255, 255);
+   height: 300px;
+   width: 100%;
+ 
+   padding: 50px;
+   display: none;
+   line-height: 35px;
+ 
+   
+}
+
+
+
+
+
+
+
+
+.clothes p.drop{
+   position: absolute;
+}
+
+.clothes:hover .drop{
+    display: block;
+}
+
+#pot{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    margin-top: 50px; 
+    margin: auto;
+    margin-left: 50px;
+   
+}
+#pot img{
+    width: 60%;
+}
+
 
 #navbar>a{
     text-decoration: none;
@@ -56,12 +106,51 @@ overflow-x: hidden;
 
 #black_strip{
     height: 50px;
+ 
     background-color: black;
     color: aliceblue;
     display: grid;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
 }
+.slider{ 
+height: 50px;
+padding-left: 15px;
+}
+
+.slider>div{
+    height: 50px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.lineone{
+    animation: slid 10s linear infinite;
+}
+
+@keyframes slid {
+ 
+    33%{margin-top: -200px;}
+    100%{margin-top:    0px;}
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .slide_img{
     width: 100%;

@@ -418,8 +418,14 @@ let product_data=[
       let para=document.createElement("div")
       
       childe_div.addEventListener("click", function(){
-          
-        cart(ele, i)
+      //    childe_div.style.backgroundColor="lightblue" 
+      //    name.innerText=ele.brand
+      // product_name.innerText=ele.name
+      // product_name.style.color="skyblue"
+      // price.innerText="product is added"
+
+      //   cart(ele, i)
+        pro(ele, i)
       })
 
 
@@ -442,15 +448,7 @@ let product_data=[
 
 function cart(ele,i){
 
-  for(let i=0; i<arr.length; i++){
-
-   if(arr[i].productid===ele.productid){
-    alert("you alredy added in cart")
-    return
-   }
-
-  }
-alert("product is added")
+  
   console.log(ele)
 
   product_data.splice(i, 1)
@@ -648,7 +646,16 @@ alert("product is added")
   
   
   
-  
+  function pro(ele, i){
+
+    localStorage.setItem("blue", JSON.stringify(ele))
+    let x="details.html"
+    
+    window.location.href=x
+
+
+
+  }
   
    
    

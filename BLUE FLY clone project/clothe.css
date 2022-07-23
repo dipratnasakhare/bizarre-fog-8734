@@ -73,7 +73,8 @@ h1{
 #trendig{
     display: block;
     text-align: right;
-    margin-right: 150px;
+    margin-right: 120px;
+   
 
 }
 #main{
@@ -102,13 +103,15 @@ h1{
   
     display: grid;
     align-content: flex-end;
+    padding: 15px;
+    margin-top: 15px;
    
    
 
 }
 #product>div>img{
    height: 250px;
-   
+  
    margin: auto;
    
 }
@@ -127,7 +130,7 @@ h1{
      
     justify-content: space-evenly;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 55px;
    
    
 }
