@@ -10,6 +10,55 @@
         margin: 0px;
         padding: 0px;
       }
+      body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+h1 {
+  text-align: center;
+  margin: 25px 0px;
+}
+
+
+
+#logo {
+  text-align: center;
+  margin: 19px 0px;
+  display: grid;
+  grid-template-columns: 60% 25% 5% 5%;
+}
+
+#logo > div:nth-child(1) {
+  display: grid;
+  justify-content: flex-end;
+}
+#search {
+  width: 250px;
+  margin-top: 10px;
+  border: 0px;
+}
+#search::placeholder {
+  text-align: end;
+}
+#logo > div:nth-child(3),
+div:nth-child(4) {
+  margin-top: 10px;
+}
+
+#navbar {
+  height: 30px;
+  width: 100%;
+}
+
+#navbar > a {
+  text-decoration: none;
+  color: black;
+  margin-left: 50px;
+  align-items: center;
+}
+
+
       #product > div {
         display: grid;
         align-content: flex-end;
@@ -41,9 +90,40 @@
         background-color: black;
         color: yellow;
       }
+
+
+
+
+
+
+
     </style>
   </head>
   <body>
+
+    <div id="adds"></div>
+
+    <div id="logo">
+        <div><img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
+                alt=""> </div>
+        <div><input id="search" placeholder=' &#xf002 Search...' type="search"></div>
+       
+    </div>
+    <div id="navbar">
+      <a href="index.html">HOME</a>
+        <a href="clothes.html">CLOTHING</a>
+        <a href="#">HANDBAGS & ACCESSORIES</a>
+        <a href="#">DESIGNERS</a>
+        <a href="#">SUNGLASSES</a>
+        <a href="#">JEWELERY & WATCHES</a>
+        <a href="#">UNDER $ 50</a>
+        <a href="#">BEAUTY</a>
+        <a href="#">CLEARANCE</a>
+    </div>
+  
+
+
+
     <h1 id="tothead">total - $ <span id="total">0</span></h1>
 
     <div id="product"></div>
@@ -464,6 +544,9 @@
 
       let btn = document.createElement("button");
       btn.innerText = "DELETE";
+      btn.style.backgroundColor="red"
+      btn.style.border="0px"
+      btn.style.padding="6px"
 
       btn.addEventListener("click", function () {
         del(ele, i);
