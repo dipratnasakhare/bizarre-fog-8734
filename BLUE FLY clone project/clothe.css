@@ -1,138 +1,105 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: futura,sans-serif;
-    line-height: 24px;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: futura, sans-serif;
+  line-height: 24px;
 }
 
-body{
-width: 100%;
-height: auto;
-overflow-x: hidden;
-
-
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
-h1{
-    text-align: center;
-    margin: 25px 0px;
-}
-
-  /* this is for any add or notification  */
-/* #adds{
-    background-color: aquamarine;
-    height: 80px;
-} */
-
-#logo{
-    text-align: center;
-    margin: 19px 0px;
-    display: grid;
-    grid-template-columns: 60% 25% 5% 5%;
-  }
-  
-  #logo>div:nth-child(1){
-      display: grid;
-      justify-content: flex-end;
-      
-  }
-  #search{
-      width: 250px;
-      margin-top: 10px;
-      border: 0px;
-  }
-  #search::placeholder{
-   
-     text-align: end;
-  }
-  #logo>div:nth-child(3), div:nth-child(4){
-      margin-top: 10px;
-      
-  }
-
-#navbar{
-    height: 80px;
-    width: 100%;
-}
-
-#navbar>a{
-    text-decoration: none;
-    color: black;
-    margin-left: 50px;
-    align-items: center;
-    
-}
-
-#black_strip{
-    height: 50px;
-    background-color: black;
-    color: aliceblue;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-#trendig{
-    display: block;
-    text-align: right;
-    margin-right: 120px;
-   
-
-}
-#main{
-  
-    display: grid;
-    grid-template-columns: 15% 85%;
-    
-}
-#select{
-   
-    line-height: 50px;
-    padding: 35px;
-    
-    border-right: 1px solid black;
-    
-}
-/* /* #product{
-    border: 5 px solid rgb(0, 255, 42);
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: space-evenly;
-    padding: 50px;
-    border: 1px oslid red;
-} */
-#product>div{
-  
-    display: grid;
-    align-content: flex-end;
-    padding: 15px;
-    margin-top: 15px;
-   
-   
-
-}
-#product>div>img{
-   height: 250px;
-  
-   margin: auto;
-   
-}
-#product>div>div{
-    
- display: grid;
- align-content: flex-end;
- 
-}
-
-#product{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin: auto;
-     
-    justify-content: space-evenly;
-    text-align: center;
-    margin-bottom: 55px;
-   
-   
+h1 {
+  text-align: center;
+  margin: 25px 0px;
 }
 
 
+
+#logo {
+  text-align: center;
+  margin: 19px 0px;
+  display: grid;
+  grid-template-columns: 60% 25% 5% 5%;
+}
+
+#logo > div:nth-child(1) {
+  display: grid;
+  justify-content: flex-end;
+}
+#search {
+  width: 250px;
+  margin-top: 10px;
+  border: 0px;
+}
+#search::placeholder {
+  text-align: end;
+}
+#logo > div:nth-child(3),
+div:nth-child(4) {
+  margin-top: 10px;
+}
+
+#navbar {
+  height: 80px;
+  width: 100%;
+}
+
+#navbar > a {
+  text-decoration: none;
+  color: black;
+  margin-left: 50px;
+  align-items: center;
+}
+
+#black_strip {
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#trendig {
+  display: block;
+  text-align: right;
+  margin-right: 120px;
+}
+#main {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+#select {
+  line-height: 50px;
+  padding: 35px;
+
+  border-right: 1px solid black;
+}
+
+#product > div {
+  display: grid;
+  align-content: flex-end;
+  padding: 15px;
+  margin-top: 15px;
+}
+#product > div > img {
+  height: 250px;
+
+  margin: auto;
+}
+#product > div > div {
+  display: grid;
+  align-content: flex-end;
+}
+
+#product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: auto;
+
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 55px;
+}
